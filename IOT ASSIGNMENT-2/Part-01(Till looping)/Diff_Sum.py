@@ -1,0 +1,5 @@
+num=input("Enter a number: ")
+even=list(filter(lambda x: x in [0,4,8],map(int,num)))
+odd=list(filter(lambda x: x in [1,5,9], map(int,num)))
+print(sum([even[i]*even[i+1] for i in range(len(even)-1)])
+ - sum([odd[i]*odd[i+1] for i in range(len(odd)-1)]))
